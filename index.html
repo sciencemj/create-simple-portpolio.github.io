@@ -3,25 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sciencemj</title>
+    <title>Portfolio Generator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Sciencemj's Portfolio</h1>
+        <h1>Portfolio Generator</h1>
     </header>
     <main>
-        <section id="about">
-            <h2>about me</h2>
-            <p>introduce ...</p>
+        <section id="form-section">
+            <h2>Enter Your Information</h2>
+            <form id="portfolio-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="tagline">Tagline:</label>
+                <input type="text" id="tagline" name="tagline" required><br>
+
+                <label for="about">About Me:</label>
+                <textarea id="about" name="about" required></textarea><br>
+
+                <label for="projects">Projects (comma-separated):</label>
+                <textarea id="projects" name="projects" required></textarea><br>
+
+                <button type="submit">Generate Portfolio</button>
+            </form>
         </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>project content</p>
+        <section id="portfolio-section" style="display:none;">
+            <h2>Your Portfolio</h2>
+            <div id="portfolio-content"></div>
+            <a id="download-link" href="#" download="portfolio.html">Download Portfolio</a>
         </section>
     </main>
     <footer>
-        <p>© 2024 My Portfolio</p>
+        <p>© 2024 Portfolio Generator</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
